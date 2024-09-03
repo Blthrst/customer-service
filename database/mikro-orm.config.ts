@@ -5,6 +5,9 @@ import path from 'path';
 
 import { User } from './entities/user.entity.js';
 
+/**
+ * Mikro-Orm configuration (secrets that starts with `MIKRO_ORM_` will be parsed automatically by Mikro-Orm)
+ */
 const config: Options = {
   allowGlobalContext: true,
   driver: PostgreSqlDriver,
