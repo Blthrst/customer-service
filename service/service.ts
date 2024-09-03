@@ -2,6 +2,7 @@ import express from "express";
 
 import { getRawData } from "./getRawData.js";
 import bodyParser from "body-parser";
+import cors from "cors"
 
 class ServiceCustomer {
     private app: express.Express
@@ -11,6 +12,8 @@ class ServiceCustomer {
 
     setup() {
         this.app.use(bodyParser.json())
+
+        this.app.use(cors())
 
         this.app.get("/raw", getRawData)
 
