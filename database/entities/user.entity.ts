@@ -6,10 +6,10 @@ import { randomUUID } from "crypto";
  */
 @Entity({ tableName: "users" })
 export class User {
-  @PrimaryKey()
   /**
-   * User's UUID
-   */
+  * User's UUID
+  */
+  @PrimaryKey()
   id: string = randomUUID();
 
   /**
